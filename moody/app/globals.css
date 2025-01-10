@@ -2,8 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-.textGradient {
+.custom-text-gradient {
     background: -webkit-linear-gradient(#1e0fc8, #8c97fd);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.custom-purple-shadow {
+    box-shadow: 2px 2px 1px 1px #b8c4ff;
+}
+
+.custom-purple-shadow:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 1px 1px #b8c4ff;
 }
