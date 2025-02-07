@@ -1,6 +1,7 @@
 import { Modak } from 'next/font/google';
 import React from 'react'
 import Button from './Button';
+import Calendar from './Calendar';
 
 const modak = Modak({
     subsets: ["latin"],
@@ -20,6 +21,7 @@ export default function Hero() {
                 <Button text='Sign up'/>
                 <Button text='Login' dark/>
             </div>
+            <Calendar demo />
         </div>
     )
 }
