@@ -1,5 +1,6 @@
 import { Modak } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const modak = Modak({
   subsets: ["latin"],
@@ -14,7 +15,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   const header = (
     <header className='p-4 sm:p-8 flex items-center justify-between gap-4'>
-      <h1 className={`${modak.className} custom-text-gradient lg:text-3xl md:text-2xl sm:text-xl`}>Moody</h1>
+      <Link href={'/'}>
+        <h1 className={`${modak.className} custom-text-gradient lg:text-3xl md:text-2xl sm:text-xl`}>Moody</h1>
+      </Link>
     </header>
   );
 
