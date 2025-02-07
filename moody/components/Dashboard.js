@@ -1,5 +1,6 @@
 import { Fredoka, Modak } from 'next/font/google';
 import React from 'react'
+import Calendar from './Calendar';
 
 const fredoka = Fredoka({
     subsets: ["latin"],
@@ -61,6 +62,7 @@ export default function Dashboard() {
                     )
                 })}
             </div>
+            <Calendar />
         </div>
     )
 }
