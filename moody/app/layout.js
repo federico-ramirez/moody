@@ -1,6 +1,7 @@
 import { Modak } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import { AuthProvider } from "@/context/AuthContext";
 
 const modak = Modak({
   subsets: ["latin"],
@@ -28,14 +29,16 @@ export default function RootLayout({ children }) {
   )
   return (
     <html lang="en">
-      <body
-        className='w-full max-w-[1000px] mx-auto text-sm sm:text-base min-h-screen
+      <AuthProvider>
+        <body
+          className='w-full max-w-[1000px] mx-auto text-sm sm:text-base min-h-screen
           flex flex-col antialiased text-slate-800'
-      >
-        {header}
-        {children}
-        {footer}
-      </body>
+        >
+          {header}
+          {children}
+          {footer}
+        </body>
+      </AuthProvider>
     </html>
   );
 }
